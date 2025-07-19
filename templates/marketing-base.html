@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{description}}">
+    <meta name="keywords" content="{{keywords}}">
+    <meta property="og:title" content="{{title}}">
+    <meta property="og:description" content="{{description}}">
+    <meta property="og:image" content="{{og_image}}">
+    <meta property="og:url" content="{{og_url}}">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/shared/css/common.css">
+    <style>
+        /* 마케팅 사이트 전용 스타일 */
+        .hero {
+            background: var(--gradient);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            margin-bottom: 0;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 24px;
+            font-weight: 700;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 32px;
+            opacity: 0.9;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin: 80px 0;
+        }
+        
+        .feature-item {
+            text-align: center;
+            padding: 40px 20px;
+        }
+        
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 24px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+        }
+        
+        .cta-section {
+            background: var(--gradient);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            margin: 80px 0 0;
+        }
+        
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+        }
+        
+        .cta-section p {
+            font-size: 1.125rem;
+            margin-bottom: 32px;
+            opacity: 0.9;
+        }
+        
+        .btn-white {
+            background: white;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        
+        .btn-white:hover {
+            background: #f8f9fa;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .feature-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+                margin: 40px 0;
+            }
+        }
+    </style>
+    {{head_content}}
+</head>
+<body>
+    <!-- 네비게이션 -->
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="/apps/{{app_id}}/marketing/">홈</a></li>
+                <li><a href="/apps/{{app_id}}/marketing/features.html">기능</a></li>
+                <li><a href="/apps/{{app_id}}/marketing/pricing.html">가격</a></li>
+                <li><a href="/apps/{{app_id}}/marketing/download.html">다운로드</a></li>
+                <li><a href="/apps/{{app_id}}/support/">고객지원</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 메인 콘텐츠 -->
+    <main>
+        {{content}}
+    </main>
+
+    <!-- 푸터 -->
+    <footer>
+        <div class="container">
+            <p>&copy; {{year}} {{app_name}}. All rights reserved.</p>
+            <p>
+                <a href="/apps/{{app_id}}/privacy.html">개인정보 처리방침</a> | 
+                <a href="/apps/{{app_id}}/terms.html">이용약관</a> |
+                <a href="/apps/{{app_id}}/support/">고객지원</a>
+            </p>
+        </div>
+    </footer>
+
+    {{script_content}}
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{description}}">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/shared/css/common.css">
+    {{head_content}}
+</head>
+<body>
+    <!-- 네비게이션 -->
+    <nav>
+        <div class="container">
+            <ul>
+                {{navigation}}
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 메인 콘텐츠 -->
+    <main>
+        {{content}}
+    </main>
+
+    <!-- 푸터 -->
+    <footer>
+        <div class="container">
+            <p>&copy; {{year}} {{app_name}}. All rights reserved.</p>
+            <p>
+                <a href="/apps/{{app_id}}/privacy.html">개인정보 처리방침</a> | 
+                <a href="/apps/{{app_id}}/terms.html">이용약관</a>
+            </p>
+        </div>
+    </footer>
+
+    {{script_content}}
+</body>
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Item Manager 다운로드 - iOS, Android 앱 다운로드">
+    <title>Item Manager - 다운로드</title>
+    <link rel="stylesheet" href="/shared/css/common.css">
+    <style>
+        .hero {
+            background: var(--gradient);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            margin-bottom: 0;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 24px;
+            font-weight: 700;
+        }
+        
+        .download-section {
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .download-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+        
+        .download-btn {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: black;
+            color: white;
+            padding: 16px 24px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+        }
+        
+        .download-btn img {
+            width: 24px;
+            height: 24px;
+        }
+        
+        .requirements-section {
+            background: var(--surface);
+            padding: 60px 0;
+            margin: 80px 0;
+        }
+        
+        .requirements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin: 40px 0;
+        }
+        
+        .requirement-item {
+            text-align: center;
+            padding: 32px;
+        }
+        
+        .requirement-icon {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto 16px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+        }
+        
+        .version-info {
+            background: var(--surface);
+            padding: 24px;
+            border-radius: 12px;
+            margin: 40px 0;
+        }
+        
+        .version-info h3 {
+            color: var(--primary-color);
+            margin-bottom: 16px;
+        }
+        
+        .changelog {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .changelog li {
+            padding: 8px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .changelog li:last-child {
+            border-bottom: none;
+        }
+        
+        .changelog li:before {
+            content: "✓ ";
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .download-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .download-btn {
+                width: 100%;
+                max-width: 280px;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 네비게이션 -->
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="/apps/item-manager/marketing/">홈</a></li>
+                <li><a href="/apps/item-manager/marketing/features.html">기능</a></li>
+                <li><a href="/apps/item-manager/marketing/download.html">다운로드</a></li>
+                <li><a href="/apps/item-manager/support/">고객지원</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 히어로 섹션 -->
+    <section class="hero">
+        <div class="container">
+            <h1>Item Manager 다운로드</h1>
+            <p>iOS와 Android에서 무료로 사용하세요</p>
+        </div>
+    </section>
+
+    <!-- 다운로드 섹션 -->
+    <section class="download-section">
+        <div class="container">
+            <h2>지금 다운로드하세요</h2>
+            <p>Item Manager는 iOS와 Android 모두에서 사용할 수 있습니다</p>
+            
+            <div class="download-buttons">
+                <a href="#" class="download-btn">
+                    <span>📱</span>
+                    <div>
+                        <div style="font-size: 12px; opacity: 0.8;">Download on the</div>
+                        <div>App Store</div>
+                    </div>
+                </a>
+                
+                <a href="#" class="download-btn">
+                    <span>🤖</span>
+                    <div>
+                        <div style="font-size: 12px; opacity: 0.8;">GET IT ON</div>
+                        <div>Google Play</div>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- 버전 정보 -->
+            <div class="version-info">
+                <h3>최신 버전 v2.1.0</h3>
+                <p><strong>출시일:</strong> 2024년 1월 15일</p>
+                <p><strong>크기:</strong> iOS 45MB, Android 38MB</p>
+                
+                <h4>새로운 기능</h4>
+                <ul class="changelog">
+                    <li>다크 모드 지원</li>
+                    <li>향상된 검색 기능</li>
+                    <li>새로운 카테고리 아이콘</li>
+                    <li>성능 개선 및 버그 수정</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 시스템 요구사항 -->
+    <section class="requirements-section">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 60px;">시스템 요구사항</h2>
+            
+            <div class="requirements-grid">
+                <div class="card requirement-item">
+                    <div class="requirement-icon">📱</div>
+                    <h3>iOS</h3>
+                    <ul style="text-align: left; margin-top: 16px;">
+                        <li>iOS 13.0 이상</li>
+                        <li>iPhone 6s 이상</li>
+                        <li>iPad Air 2 이상</li>
+                        <li>저장공간 50MB 이상</li>
+                    </ul>
+                </div>
+                
+                <div class="card requirement-item">
+                    <div class="requirement-icon">🤖</div>
+                    <h3>Android</h3>
+                    <ul style="text-align: left; margin-top: 16px;">
+                        <li>Android 7.0 (API 24) 이상</li>
+                        <li>RAM 2GB 이상</li>
+                        <li>저장공간 50MB 이상</li>
+                        <li>카메라 권한 (사진 촬영용)</li>
+                    </ul>
+                </div>
+                
+                <div class="card requirement-item">
+                    <div class="requirement-icon">🔒</div>
+                    <h3>보안</h3>
+                    <ul style="text-align: left; margin-top: 16px;">
+                        <li>로컬 데이터 저장</li>
+                        <li>클라우드 서버 미사용</li>
+                        <li>개인정보 수집 없음</li>
+                        <li>오프라인 사용 가능</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 도움말 섹션 -->
+    <section class="container">
+        <div class="card" style="text-align: center; padding: 60px 40px;">
+            <h2>설치에 문제가 있나요?</h2>
+            <p>앱 설치나 사용 중 문제가 발생하면 고객지원팀에 문의해주세요</p>
+            <a href="/apps/item-manager/support/" class="btn btn-primary">고객지원 센터</a>
+        </div>
+    </section>
+
+    <!-- 푸터 -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Item Manager. All rights reserved.</p>
+            <p>
+                <a href="/apps/item-manager/privacy.html">개인정보 처리방침</a> | 
+                <a href="/apps/item-manager/terms.html">이용약관</a> |
+                <a href="/apps/item-manager/support/">고객지원</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

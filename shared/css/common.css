@@ -1,0 +1,183 @@
+/* 공통 CSS 스타일 - Item Manager 브랜드 색상 */
+:root {
+  /* 라이트 모드 색상 */
+  --primary-color: #26A69A;
+  --primary-dark: #00897B;
+  --secondary-color: #1E88E5;
+  --secondary-dark: #1565C0;
+  --accent-color: #00ACC1;
+  --text-primary: #212121;
+  --text-secondary: #757575;
+  --background: #FFFFFF;
+  --surface: #F5F5F5;
+  --border-color: #E0E0E0;
+  --gradient: linear-gradient(135deg, #26A69A 0%, #1E88E5 100%);
+}
+
+/* 다크 모드 색상 */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-color: #4DB6AC;
+    --primary-dark: #00897B;
+    --secondary-color: #42A5F5;
+    --secondary-dark: #1976D2;
+    --accent-color: #26C6DA;
+    --text-primary: #FFFFFF;
+    --text-secondary: #B0B0B0;
+    --background: #121212;
+    --surface: #1E1E1E;
+    --border-color: #333333;
+  }
+}
+
+/* 리셋 스타일 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 기본 타이포그래피 */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-primary);
+  background-color: var(--background);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 1rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.75rem; }
+h4 { font-size: 1.5rem; }
+h5 { font-size: 1.25rem; }
+h6 { font-size: 1rem; }
+
+p {
+  margin-bottom: 1rem;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--primary-dark);
+}
+
+/* 컨테이너 */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* 버튼 스타일 */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: var(--gradient);
+  color: white;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(38, 166, 154, 0.3);
+}
+
+.btn-secondary {
+  background-color: var(--surface);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+  background-color: var(--border-color);
+}
+
+/* 카드 컴포넌트 */
+.card {
+  background-color: var(--surface);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* 네비게이션 */
+nav {
+  background-color: var(--surface);
+  padding: 16px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+nav a {
+  color: var(--text-primary);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--primary-color);
+}
+
+/* 푸터 */
+footer {
+  background-color: var(--surface);
+  padding: 40px 0 20px;
+  margin-top: 80px;
+  border-top: 1px solid var(--border-color);
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.25rem; }
+  
+  .container {
+    padding: 0 16px;
+  }
+  
+  nav ul {
+    flex-direction: column;
+    gap: 16px;
+  }
+}

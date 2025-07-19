@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Item Manager - 개인 소유물을 체계적으로 관리하는 스마트한 앱">
+    <meta name="keywords" content="물품관리, 소유물관리, 인벤토리, 개인자산, 물건정리">
+    <meta property="og:title" content="Item Manager - 스마트한 물품 관리 앱">
+    <meta property="og:description" content="개인 소유물을 체계적으로 관리하고 정리하세요">
+    <meta property="og:image" content="/shared/images/item-manager-og.jpg">
+    <meta property="og:url" content="https://item-manager.example.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>Item Manager - 스마트한 물품 관리 앱</title>
+    <link rel="stylesheet" href="/shared/css/common.css">
+    <style>
+        /* 마케팅 사이트 전용 스타일 */
+        .hero {
+            background: var(--gradient);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            margin-bottom: 0;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 24px;
+            font-weight: 700;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 32px;
+            opacity: 0.9;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin: 80px 0;
+        }
+        
+        .feature-item {
+            text-align: center;
+            padding: 40px 20px;
+        }
+        
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 24px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+        }
+        
+        .cta-section {
+            background: var(--gradient);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            margin: 80px 0 0;
+        }
+        
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+        }
+        
+        .cta-section p {
+            font-size: 1.125rem;
+            margin-bottom: 32px;
+            opacity: 0.9;
+        }
+        
+        .btn-white {
+            background: white;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        
+        .btn-white:hover {
+            background: #f8f9fa;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+        }
+        
+        .stats-section {
+            background: var(--surface);
+            padding: 60px 0;
+            margin: 80px 0;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+        
+        .stat-item h3 {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 8px;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .feature-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+                margin: 40px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 네비게이션 -->
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="/apps/item-manager/marketing/">홈</a></li>
+                <li><a href="/apps/item-manager/marketing/features.html">기능</a></li>
+                <li><a href="/apps/item-manager/marketing/download.html">다운로드</a></li>
+                <li><a href="/apps/item-manager/support/">고객지원</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 히어로 섹션 -->
+    <section class="hero">
+        <div class="container">
+            <h1>Item Manager</h1>
+            <p>개인 소유물을 체계적으로 관리하는 스마트한 앱</p>
+            <a href="/apps/item-manager/marketing/download.html" class="btn btn-white">지금 다운로드</a>
+        </div>
+    </section>
+
+    <!-- 주요 기능 섹션 -->
+    <section class="container">
+        <h2 style="text-align: center; margin-bottom: 60px;">주요 기능</h2>
+        
+        <div class="feature-grid">
+            <div class="feature-item">
+                <div class="feature-icon">📦</div>
+                <h3>물품 등록</h3>
+                <p>구매일, 가격, 보증기간 등 상세 정보를 입력하여 체계적으로 관리하세요</p>
+            </div>
+            
+            <div class="feature-item">
+                <div class="feature-icon">📸</div>
+                <h3>사진 관리</h3>
+                <p>물품당 여러 장의 사진을 첨부하여 시각적으로 관리할 수 있습니다</p>
+            </div>
+            
+            <div class="feature-item">
+                <div class="feature-icon">🏷️</div>
+                <h3>카테고리 분류</h3>
+                <p>20개의 카테고리로 물품을 체계적으로 분류하고 정리하세요</p>
+            </div>
+            
+            <div class="feature-item">
+                <div class="feature-icon">🔍</div>
+                <h3>빠른 검색</h3>
+                <p>이름, 카테고리, 위치 등으로 원하는 물품을 빠르게 찾을 수 있습니다</p>
+            </div>
+            
+            <div class="feature-item">
+                <div class="feature-icon">📊</div>
+                <h3>통계 보기</h3>
+                <p>보유 물품 통계와 지출 분석으로 자산을 한눈에 파악하세요</p>
+            </div>
+            
+            <div class="feature-item">
+                <div class="feature-icon">📍</div>
+                <h3>보관 장소 관리</h3>
+                <p>물건의 정확한 위치를 기록하고 관리하여 찾고 싶은 물건을 쉽게 찾을 수 있습니다</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CTA 섹션 -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>지금 시작하세요</h2>
+            <p>개인 소유물을 체계적으로 관리하고 싶다면 지금 Item Manager를 다운로드하세요</p>
+            <a href="/apps/item-manager/marketing/download.html" class="btn btn-white">무료 다운로드</a>
+        </div>
+    </section>
+
+    <!-- 푸터 -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Item Manager. All rights reserved.</p>
+            <p>
+                <a href="/apps/item-manager/privacy.html">개인정보 처리방침</a> | 
+                <a href="/apps/item-manager/terms.html">이용약관</a> |
+                <a href="/apps/item-manager/support/">고객지원</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

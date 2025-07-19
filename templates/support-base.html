@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{description}}">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/shared/css/common.css">
+    <style>
+        /* 지원 사이트 전용 스타일 */
+        .hero {
+            background: var(--gradient);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            margin-bottom: 16px;
+        }
+        
+        .support-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin: 40px 0;
+        }
+        
+        .support-card {
+            text-align: center;
+            padding: 32px;
+        }
+        
+        .support-card .icon {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto 16px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+        }
+        
+        .faq-section {
+            margin: 60px 0;
+        }
+        
+        .faq-item {
+            margin-bottom: 16px;
+        }
+        
+        .faq-question {
+            background-color: var(--surface);
+            padding: 16px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s ease;
+        }
+        
+        .faq-question:hover {
+            background-color: var(--border-color);
+        }
+        
+        .faq-answer {
+            padding: 16px 24px;
+            display: none;
+            color: var(--text-secondary);
+        }
+        
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+        
+        .contact-section {
+            text-align: center;
+            padding: 60px 0;
+            background-color: var(--surface);
+            border-radius: 12px;
+        }
+        
+        .breadcrumb {
+            background-color: var(--surface);
+            padding: 12px 0;
+            margin-bottom: 24px;
+        }
+        
+        .breadcrumb-nav {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+        }
+        
+        .breadcrumb-nav a {
+            color: var(--text-secondary);
+        }
+        
+        .breadcrumb-nav .current {
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+        
+        .guide-section {
+            margin: 40px 0;
+        }
+        
+        .guide-section h3 {
+            color: var(--primary-color);
+            margin-bottom: 16px;
+        }
+        
+        .guide-section ol,
+        .guide-section ul {
+            margin-left: 24px;
+            margin-bottom: 16px;
+        }
+        
+        .guide-section li {
+            margin-bottom: 8px;
+        }
+        
+        .alert {
+            padding: 16px;
+            border-radius: 8px;
+            margin: 16px 0;
+            border-left: 4px solid var(--primary-color);
+            background-color: var(--surface);
+        }
+        
+        .alert-info {
+            border-left-color: var(--secondary-color);
+        }
+        
+        .alert-warning {
+            border-left-color: #ff9800;
+        }
+    </style>
+    {{head_content}}
+</head>
+<body>
+    <!-- 네비게이션 -->
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="/apps/{{app_id}}/support/">홈</a></li>
+                <li><a href="/apps/{{app_id}}/support/guide.html">사용 가이드</a></li>
+                <li><a href="/apps/{{app_id}}/support/faq.html">자주 묻는 질문</a></li>
+                <li><a href="/apps/{{app_id}}/support/contact.html">문의하기</a></li>
+                <li><a href="/apps/{{app_id}}/marketing/">마케팅 사이트</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 브레드크럼 -->
+    <div class="breadcrumb">
+        <div class="container">
+            <nav class="breadcrumb-nav">
+                <a href="/apps/{{app_id}}/support/">지원 센터</a>
+                <span>></span>
+                <span class="current">{{breadcrumb}}</span>
+            </nav>
+        </div>
+    </div>
+
+    <!-- 메인 콘텐츠 -->
+    <main>
+        {{content}}
+    </main>
+
+    <!-- 푸터 -->
+    <footer>
+        <div class="container">
+            <p>&copy; {{year}} {{app_name}}. All rights reserved.</p>
+            <p>
+                <a href="/apps/{{app_id}}/privacy.html">개인정보 처리방침</a> | 
+                <a href="/apps/{{app_id}}/terms.html">이용약관</a> |
+                <a href="/apps/{{app_id}}/marketing/">마케팅 사이트</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- FAQ 토글 기능 -->
+    <script>
+        // FAQ 토글 기능
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                faqItem.classList.toggle('active');
+                
+                // + / - 기호 변경
+                const icon = question.querySelector('span:last-child');
+                if (icon) {
+                    icon.textContent = faqItem.classList.contains('active') ? '-' : '+';
+                }
+            });
+        });
+    </script>
+
+    {{script_content}}
+</body>
+</html>
