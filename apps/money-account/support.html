@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>다함께 가계부 - 지원</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #34495e;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+
+        h3 {
+            color: #7f8c8d;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+
+        .app-intro {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        .app-intro p {
+            margin: 10px 0;
+        }
+
+        .feature-list {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: start;
+            gap: 10px;
+        }
+
+        .feature-icon {
+            color: #3498db;
+            font-size: 1.2em;
+            margin-top: 2px;
+        }
+
+        .faq-section {
+            margin: 30px 0;
+        }
+
+        .faq-category {
+            margin-bottom: 30px;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .faq-answer {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .contact-section {
+            background-color: #e8f4f8;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+
+        .contact-section p {
+            margin: 10px 0;
+        }
+
+        .contact-email {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-email:hover {
+            text-decoration: underline;
+        }
+
+        .links-section {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .links-section a {
+            color: #3498db;
+            text-decoration: none;
+            display: inline-block;
+            margin-right: 20px;
+            margin-bottom: 10px;
+        }
+
+        .links-section a:hover {
+            text-decoration: underline;
+        }
+
+        .step-guide {
+            counter-reset: step-counter;
+            margin: 20px 0;
+        }
+
+        .step-item {
+            position: relative;
+            padding-left: 40px;
+            margin-bottom: 15px;
+            counter-increment: step-counter;
+        }
+
+        .step-item::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: #3498db;
+            color: white;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
+
+            h2 {
+                font-size: 1.3em;
+            }
+
+            h3 {
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>다함께 가계부 지원</h1>
+
+        <div class="app-intro">
+            <p><strong>다함께 가계부</strong>는 가족과 함께 수입과 지출을 관리하는 스마트한 가계부 앱입니다.</p>
+            <p>온 가족이 함께 예산을 설정하고, 지출을 추적하며, 재정 목표를 달성해보세요.</p>
+        </div>
+
+        <h2>주요 기능</h2>
+        <div class="feature-list">
+            <div class="feature-item">
+                <span class="feature-icon">✓</span>
+                <div>
+                    <strong>가족 공동 관리</strong> - 가족 구성원 모두가 실시간으로 가계부를 공유하고 관리
+                </div>
+            </div>
+            <div class="feature-item">
+                <span class="feature-icon">✓</span>
+                <div>
+                    <strong>예산 설정 및 추적</strong> - 월별 예산을 설정하고 지출 현황을 한눈에 파악
+                </div>
+            </div>
+            <div class="feature-item">
+                <span class="feature-icon">✓</span>
+                <div>
+                    <strong>구성원별 지출 분석</strong> - 가족 구성원별 지출 패턴과 비중을 분석
+                </div>
+            </div>
+            <div class="feature-item">
+                <span class="feature-icon">✓</span>
+                <div>
+                    <strong>카테고리별 관리</strong> - 다양한 카테고리로 수입과 지출을 체계적으로 분류
+                </div>
+            </div>
+            <div class="feature-item">
+                <span class="feature-icon">✓</span>
+                <div>
+                    <strong>월별 통계 및 리포트</strong> - 시각적인 차트로 재정 상태를 쉽게 이해
+                </div>
+            </div>
+        </div>
+
+        <h2>시작하기</h2>
+
+        <h3>계정 생성 및 로그인</h3>
+        <div class="step-guide">
+            <div class="step-item">앱을 다운로드하고 실행합니다</div>
+            <div class="step-item">이메일과 비밀번호로 회원가입을 진행합니다</div>
+            <div class="step-item">이메일 인증을 완료합니다</div>
+            <div class="step-item">프로필을 설정하고 시작합니다</div>
+        </div>
+
+        <h3>가족 그룹 만들기</h3>
+        <div class="step-guide">
+            <div class="step-item">메인 화면에서 '가족 만들기'를 선택합니다</div>
+            <div class="step-item">가족 이름과 설명을 입력합니다</div>
+            <div class="step-item">생성된 6자리 초대 코드를 가족에게 공유합니다</div>
+            <div class="step-item">가족 구성원이 초대 코드로 참여하면 완료됩니다</div>
+        </div>
+
+        <h3>첫 거래 입력하기</h3>
+        <div class="step-guide">
+            <div class="step-item">하단의 '+' 버튼을 탭합니다</div>
+            <div class="step-item">금액을 입력합니다</div>
+            <div class="step-item">카테고리와 설명을 선택합니다</div>
+            <div class="step-item">거래를 저장합니다</div>
+        </div>
+
+        <h2>자주 묻는 질문</h2>
+
+        <div class="faq-section">
+            <div class="faq-category">
+                <h3>계정 관리</h3>
+
+                <div class="faq-item">
+                    <div class="faq-question">비밀번호를 잊어버렸어요</div>
+                    <div class="faq-answer">
+                        로그인 화면에서 '비밀번호 찾기'를 선택하고 가입한 이메일 주소를 입력하세요.
+                        비밀번호 재설정 링크가 이메일로 전송됩니다.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">이메일 인증 메일이 오지 않아요</div>
+                    <div class="faq-answer">
+                        스팸 메일함을 확인해주세요. 그래도 없다면 인증 화면에서 '재전송' 버튼을 눌러
+                        다시 시도해보세요. noreply@mail.app.supabase.io 주소를 안전한 발신자로 추가하는 것도 도움이 됩니다.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">계정을 삭제하고 싶어요</div>
+                    <div class="faq-answer">
+                        더보기 탭 > 계정 관리 > 계정 삭제를 선택하세요.
+                        계정 삭제 시 모든 개인 데이터가 영구적으로 삭제되며 복구할 수 없습니다.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-category">
+                <h3>가족 관리</h3>
+
+                <div class="faq-item">
+                    <div class="faq-question">가족 초대 코드는 어떻게 사용하나요?</div>
+                    <div class="faq-answer">
+                        가족을 생성하면 6자리 숫자 초대 코드가 자동으로 생성됩니다.
+                        이 코드를 가족 구성원에게 공유하면, 상대방이 '가족 참여' 메뉴에서
+                        코드를 입력하여 가족 그룹에 참여할 수 있습니다.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">가족 구성원을 추가하거나 제거하려면?</div>
+                    <div class="faq-answer">
+                        더보기 탭 > 가족 관리에서 현재 가족 구성원을 확인할 수 있습니다.
+                        새 구성원 추가는 초대 코드를 공유하여 진행하고,
+                        관리자는 구성원을 선택하여 제거할 수 있습니다.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">여러 가족 그룹을 관리할 수 있나요?</div>
+                    <div class="faq-answer">
+                        네, 가능합니다. 더보기 탭에서 가족 목록을 확인하고
+                        원하는 가족으로 전환할 수 있습니다. 각 가족의 데이터는
+                        독립적으로 관리됩니다.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-category">
+                <h3>거래 및 예산</h3>
+
+                <div class="faq-item">
+                    <div class="faq-question">거래를 어떻게 입력하나요?</div>
+                    <div class="faq-answer">
+                        메인 화면 하단의 파란색 '+' 버튼을 탭하여 거래 입력을 시작합니다.
+                        금액, 카테고리, 설명을 순서대로 입력한 후 저장하면 됩니다.
+                        수입과 지출은 자동으로 구분됩니다.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">예산을 설정하는 방법은?</div>
+                    <div class="faq-answer">
+                        더보기 탭 > 예산 관리에서 월별 예산을 설정할 수 있습니다.
+                        전체 예산과 카테고리별 예산을 각각 설정할 수 있으며,
+                        예산 대비 지출 현황은 메인 화면에서 확인 가능합니다.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">구성원별 지출을 어떻게 구분하나요?</div>
+                    <div class="faq-answer">
+                        거래 입력 시 마지막 단계에서 거래를 수행한 가족 구성원을 선택할 수 있습니다.
+                        공동 지출의 경우 'Shared'를 선택하면 됩니다.
+                        통계 탭에서 구성원별 지출 비중을 확인할 수 있습니다.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-category">
+                <h3>동기화 및 데이터</h3>
+
+                <div class="faq-item">
+                    <div class="faq-question">데이터가 동기화되지 않아요</div>
+                    <div class="faq-answer">
+                        화면을 아래로 당겨서 새로고침을 시도해보세요.
+                        인터넷 연결 상태를 확인하고, 문제가 지속되면
+                        앱을 완전히 종료한 후 다시 실행해보세요.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">오프라인에서도 사용할 수 있나요?</div>
+                    <div class="faq-answer">
+                        오프라인 상태에서는 기존 데이터를 볼 수 있지만,
+                        새로운 거래 입력이나 수정은 제한됩니다.
+                        온라인 상태가 되면 자동으로 동기화됩니다.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-section">
+            <h2>문의하기</h2>
+            <p>앱 사용 중 문제가 발생하거나 도움이 필요하신가요?</p>
+            <p>이메일: <a href="mailto:osoun_n@naver.com" class="contact-email">osoun_n@naver.com</a></p>
+            <p>앱 내 '더보기 > 피드백' 메뉴를 통해서도 의견을 보내실 수 있습니다.</p>
+        </div>
+
+        <div class="links-section">
+            <h3>관련 링크</h3>
+            <a href="privacy/privacy_policy.html">개인정보 처리방침</a>
+            <a href="privacy/account_deletion.html">계정 삭제</a>
+        </div>
+    </div>
+</body>
+
+</html>

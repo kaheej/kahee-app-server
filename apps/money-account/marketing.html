@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>다함께 가계부 - 가족과 함께하는 스마트한 재정 관리</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        /* 히어로 섹션 */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero .subtitle {
+            font-size: 1.3em;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+
+        .hero-image {
+            max-width: 300px;
+            margin: 40px auto;
+            display: block;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .download-buttons {
+            margin: 40px 0;
+        }
+
+        .download-btn {
+            display: inline-block;
+            padding: 15px 30px;
+            margin: 10px;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            border: 2px solid white;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .download-btn:hover {
+            background-color: white;
+            color: #667eea;
+            transform: translateY(-2px);
+        }
+
+        /* 기능 섹션 */
+        .features {
+            padding: 80px 20px;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 50px;
+            color: #2c3e50;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .feature-icon {
+            font-size: 3em;
+            margin-bottom: 20px;
+            display: block;
+            text-align: center;
+        }
+
+        .feature-title {
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            color: #2c3e50;
+            text-align: center;
+        }
+
+        .feature-description {
+            color: #666;
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        /* 스크린샷 섹션 */
+        .screenshots {
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .screenshot-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .screenshot-item {
+            position: relative;
+            text-align: center;
+        }
+
+        .screenshot-item img {
+            width: 100%;
+            max-width: 280px;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .screenshot-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .screenshot-caption {
+            margin-top: 15px;
+            font-weight: 600;
+            color: #34495e;
+        }
+
+        /* 혜택 섹션 */
+        .benefits {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+
+        .benefits-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .benefit-item {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .benefit-icon {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            color: #667eea;
+        }
+
+        .benefit-title {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .benefit-desc {
+            color: #666;
+        }
+
+        /* CTA 섹션 */
+        .cta {
+            padding: 80px 20px;
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .cta p {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 18px 40px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.1em;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: #764ba2;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* 푸터 */
+        .footer {
+            padding: 40px 20px;
+            background: #1a1a1a;
+            color: white;
+            text-align: center;
+        }
+
+        .footer-links {
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            color: #aaa;
+            text-decoration: none;
+            margin: 0 15px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .footer-copyright {
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        /* 반응형 디자인 */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2em;
+            }
+
+            .hero .subtitle {
+                font-size: 1.1em;
+            }
+
+            .section-title {
+                font-size: 1.5em;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .screenshot-container {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+
+            .benefits-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 히어로 섹션 -->
+    <section class="hero">
+        <div class="container">
+            <h1>다함께 가계부</h1>
+            <p class="subtitle">가족과 함께 관리하는 스마트한 가계부</p>
+            <img src="img/ko/3.png" alt="다함께 가계부 메인 화면" class="hero-image">
+            <div class="download-buttons">
+                <a href="#" class="download-btn">App Store (준비중)</a>
+                <a href="#" class="download-btn">Google Play (준비중)</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 기능 섹션 -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">온 가족이 함께하는 재정 관리</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <span class="feature-icon">👨‍👩‍👧‍👦</span>
+                    <h3 class="feature-title">가족과 함께 관리</h3>
+                    <p class="feature-description">
+                        가족 구성원 모두가 실시간으로 가계부를 공유하고 관리할 수 있습니다.
+                        투명한 재정 관리로 가족의 재정 목표를 함께 달성하세요.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">📊</span>
+                    <h3 class="feature-title">스마트한 예산 관리</h3>
+                    <p class="feature-description">
+                        월별 예산을 설정하고 실시간으로 지출 현황을 추적합니다.
+                        예산 초과 전 알림으로 계획적인 소비가 가능합니다.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">📈</span>
+                    <h3 class="feature-title">시각적 분석</h3>
+                    <p class="feature-description">
+                        카테고리별 지출 비중과 월별 추이를 한눈에 파악할 수 있는
+                        직관적인 차트와 그래프를 제공합니다.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🔄</span>
+                    <h3 class="feature-title">실시간 동기화</h3>
+                    <p class="feature-description">
+                        가족 구성원이 입력한 내용이 즉시 동기화되어
+                        언제 어디서나 최신 정보를 확인할 수 있습니다.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">📅</span>
+                    <h3 class="feature-title">달력 뷰</h3>
+                    <p class="feature-description">
+                        월별 수입과 지출을 달력에서 한눈에 확인하고,
+                        일별 거래 내역을 쉽게 관리할 수 있습니다.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">👤</span>
+                    <h3 class="feature-title">구성원별 관리</h3>
+                    <p class="feature-description">
+                        가족 구성원별 지출 패턴을 분석하고,
+                        개인별 예산 관리도 가능합니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 스크린샷 섹션 -->
+    <section class="screenshots">
+        <div class="container">
+            <h2 class="section-title">주요 화면</h2>
+            <div class="screenshot-container">
+                <div class="screenshot-item">
+                    <img src="img/ko/1.png" alt="온보딩 화면">
+                    <p class="screenshot-caption">간편한 시작</p>
+                </div>
+                <div class="screenshot-item">
+                    <img src="img/ko/4.png" alt="달력 화면">
+                    <p class="screenshot-caption">월별 달력 뷰</p>
+                </div>
+                <div class="screenshot-item">
+                    <img src="img/ko/5.png" alt="통계 화면">
+                    <p class="screenshot-caption">카테고리별 분석</p>
+                </div>
+                <div class="screenshot-item">
+                    <img src="img/ko/2.png" alt="실시간 공유">
+                    <p class="screenshot-caption">실시간 공유</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 혜택 섹션 -->
+    <section class="benefits">
+        <div class="container">
+            <h2 class="section-title">이런 분들께 추천합니다</h2>
+            <div class="benefits-list">
+                <div class="benefit-item">
+                    <div class="benefit-icon">💑</div>
+                    <h3 class="benefit-title">신혼부부</h3>
+                    <p class="benefit-desc">함께 시작하는 새로운 삶의 재정 계획</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">👨‍👩‍👧‍👦</div>
+                    <h3 class="benefit-title">자녀가 있는 가정</h3>
+                    <p class="benefit-desc">교육비와 생활비의 체계적 관리</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">🏠</div>
+                    <h3 class="benefit-title">주택 구매 계획</h3>
+                    <p class="benefit-desc">목표 달성을 위한 저축과 지출 관리</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">💰</div>
+                    <h3 class="benefit-title">절약하고 싶은 분</h3>
+                    <p class="benefit-desc">불필요한 지출을 줄이고 저축 늘리기</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA 섹션 -->
+    <section class="cta">
+        <div class="container">
+            <h2>지금 바로 시작하세요</h2>
+            <p>가족과 함께 더 나은 재정 관리를 시작할 시간입니다</p>
+            <a href="support.html" class="cta-button">자세히 알아보기</a>
+        </div>
+    </section>
+
+    <!-- 푸터 -->
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="support.html">지원</a>
+            <a href="privacy_policy.html">개인정보 처리방침</a>
+            <a href="account_deletion.html">계정 삭제</a>
+        </div>
+        <p class="footer-copyright">© 2025 다함께 가계부. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
