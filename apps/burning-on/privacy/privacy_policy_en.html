@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BurningON Challenge - Privacy Policy</title>
+    <title>BurningON Diet - Privacy Policy</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -95,9 +95,9 @@
 
 <body>
     <div class="container">
-        <h1>BurningON Challenge Privacy Policy</h1>
+        <h1>BurningON Diet Privacy Policy</h1>
 
-        <p><strong>BurningON Challenge</strong> (hereinafter referred to as "the Service") protects users' personal information in accordance with privacy protection laws. This Privacy Policy explains how users' personal information is collected, used, and protected.</p>
+        <p><strong>BurningON Diet</strong> (hereinafter referred to as "the Service") protects users' personal information in accordance with privacy protection laws. This Privacy Policy explains how users' personal information is collected, used, and protected.</p>
 
         <h2>Article 1: Purpose of Processing Personal Information</h2>
         <p>The Service processes personal information for the following purposes:</p>
@@ -105,9 +105,10 @@
             <li><strong>Member Registration and Management:</strong> Identity verification, membership maintenance and management, prevention of fraudulent use of services</li>
             <li><strong>Diet Program Services:</strong> Provision of customized diet programs, progress tracking, goal achievement support</li>
             <li><strong>Health Data Management:</strong> Recording and analysis of health indicators such as weight, body fat, sleep, and bowel movements</li>
-            <li><strong>Meal Management:</strong> Daily meal recording, calorie tracking</li>
-            <li><strong>Challenge Services:</strong> Challenge participation, progress management, achievement analysis</li>
-            <li><strong>Notification Services:</strong> Water reminders, meal notifications, diet-related information</li>
+            <li><strong>Meal Management:</strong> Daily meal recording, calorie tracking, intermittent fasting time management</li>
+            <li><strong>Workout Recording:</strong> Recording workout types, sets/reps/duration, GPS route tracking, workout statistics analysis</li>
+            <li><strong>Quest System:</strong> Quest completion processing and progress synchronization</li>
+            <li><strong>Notification Services:</strong> Water reminders, fasting completion alerts, diet-related information</li>
         </ul>
 
         <div class="important-notice">
@@ -132,10 +133,11 @@
 
         <h3>3. Information Collected During Service Use</h3>
         <ul>
-            <li><strong>Health Information:</strong> Weight, height, body fat percentage, muscle mass</li>
-            <li><strong>Lifestyle Habits:</strong> Sleep hours, bowel frequency, exercise records, water intake</li>
-            <li><strong>Meal Information:</strong> Meal records, calories, nutrient information, fasting hours</li>
-            <li><strong>Program Data:</strong> Diet phase, target weight, progress status</li>
+            <li><strong>Health Information:</strong> Weight, height, body fat percentage, muscle mass, visceral fat, waist circumference, InBody measurement data</li>
+            <li><strong>Lifestyle Habits:</strong> Sleep hours, bowel frequency, water intake, menstrual period records</li>
+            <li><strong>Meal Information:</strong> Meal records, calories, nutrient information, intermittent fasting time, fasting timer records</li>
+            <li><strong>Workout Information:</strong> Workout type, sets, reps, duration, weight, rest time, GPS route coordinates, workout photos, steps, stairs</li>
+            <li><strong>Program Data:</strong> Diet phase, target weight, progress status, quest completion records</li>
         </ul>
 
         <h3>4. Automatically Collected Information</h3>
@@ -144,6 +146,7 @@
             <li><strong>Push Notifications:</strong> FCM token</li>
             <li><strong>Advertising Information:</strong> Advertising identifier (IDFA/GAID), ad interaction data</li>
             <li><strong>App Usage Information:</strong> Access time, usage history, app version</li>
+            <li><strong>Health Data Integration:</strong> HealthKit (iOS) or Google Fit (Android) integration data (steps, stairs) - Collected only with user permission</li>
         </ul>
 
         <h2>Article 3: Processing and Retention Period of Personal Information</h2>
@@ -159,15 +162,15 @@
             </tr>
             <tr>
                 <td>Health Record Data</td>
-                <td>Immediately deleted upon app deletion</td>
+                <td>Immediately deleted upon app deletion (locally stored)</td>
             </tr>
             <tr>
-                <td>Diet Program Records</td>
-                <td>Immediately deleted upon app deletion</td>
+                <td>Diet and Workout Records</td>
+                <td>Immediately deleted upon app deletion (locally stored)</td>
             </tr>
             <tr>
-                <td>Challenge Participation Records</td>
-                <td>6 months after challenge completion</td>
+                <td>Quest Completion Records</td>
+                <td>Immediately deleted upon app deletion</td>
             </tr>
         </table>
 
@@ -231,8 +234,9 @@
 
         <h2>Article 9: Data Storage Location</h2>
         <div class="important-notice">
-            <p><strong>📱 Locally Stored Data:</strong> Sensitive health information such as weight, body fat, and meal records are primarily stored in the local database on the user's device and are not transmitted to external servers.</p>
-            <p><strong>☁️ Cloud Backup:</strong> Data is encrypted and stored on Supabase servers or Google Drive only when the user activates the backup feature.</p>
+            <p><strong>📱 Locally Stored Data:</strong> All sensitive personal health information such as weight, body fat, meal records, workout records, and health records are primarily stored in the local database on the user's device and are not transmitted to external servers.</p>
+            <p><strong>☁️ Server Stored Data:</strong> Only quest completion information is stored on Supabase servers and synchronized upon login. This is to allow users to access their achievement records on other devices.</p>
+            <p><strong>💾 Cloud Backup:</strong> Data is encrypted and stored on Supabase servers or Google Drive only when the user activates the backup feature.</p>
         </div>
 
         <h2>Article 10: Advertising and Tracking</h2>
@@ -265,7 +269,7 @@
         <p>This Privacy Policy is effective from the implementation date. If there are additions, deletions, or corrections to the content due to changes in laws and policies, we will notify you through the app's notice board 7 days before the implementation of the changes.</p>
 
         <div class="update-date">
-            <p>Effective Date: September 21, 2025</p>
+            <p>Effective Date: October 14, 2025</p>
         </div>
     </div>
 </body>
