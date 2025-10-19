@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Activate your fat metabolism with Switch On Diet app. All-in-one management: meal, weight, InBody, water intake, fasting, workout, notes.">
+    <meta name="keywords" content="Switch On,SwitchOn,diet,intermittent fasting,IF,fasting timer,meal plan,calorie tracker,weight loss,water intake,Dr Park,My Optimal,health tracker">
+    <title>BurningON Diet Challenge - My Optimal, Intermittent Fasting</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #212121;
+            background-color: #FAFAFA;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .hero .subtitle {
+            font-size: 20px;
+            margin-bottom: 12px;
+            opacity: 0.95;
+        }
+
+        .hero .tagline {
+            font-size: 16px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 32px;
+            line-height: 1.8;
+        }
+
+        .download-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .download-btn {
+            display: inline-block;
+            background-color: white;
+            color: #4CAF50;
+            padding: 14px 32px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: transform 0.2s;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .section {
+            background-color: white;
+            border-radius: 16px;
+            padding: 48px 40px;
+            margin: 24px 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+
+        h2 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #212121;
+            text-align: center;
+        }
+
+        .section-intro {
+            font-size: 16px;
+            color: #616161;
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 48px;
+            line-height: 1.8;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+            margin-top: 32px;
+        }
+
+        .feature-card {
+            padding: 24px;
+            border-radius: 12px;
+            background-color: #F5F5F5;
+        }
+
+        .feature-card h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #212121;
+        }
+
+        .feature-card p {
+            font-size: 15px;
+            color: #616161;
+            line-height: 1.7;
+        }
+
+        .target-list, .highlight-list {
+            list-style: none;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .target-list li, .highlight-list li {
+            padding: 16px 20px;
+            margin-bottom: 12px;
+            background-color: #F5F5F5;
+            border-radius: 12px;
+            font-size: 16px;
+            color: #424242;
+        }
+
+        .highlight-list li {
+            background-color: #E8F5E9;
+            color: #2E7D32;
+            font-weight: 500;
+        }
+
+        footer {
+            background-color: white;
+            padding: 40px 20px;
+            text-align: center;
+            margin-top: 48px;
+        }
+
+        .footer-links {
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            color: #4CAF50;
+            text-decoration: none;
+            margin: 0 16px;
+            font-size: 14px;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-copyright {
+            color: #9E9E9E;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .hero .subtitle {
+                font-size: 18px;
+            }
+
+            .hero .tagline {
+                font-size: 14px;
+            }
+
+            .section {
+                padding: 32px 24px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1>BurningON Diet Challenge</h1>
+        <p class="subtitle">My Optimal, Intermittent Fasting</p>
+        <p class="tagline">
+            Activate Your Fat Metabolism with Switch On Diet App<br>
+            All-in-one management: meal plans, weight, InBody data, water intake, fasting timer, progress photos, and personal notes
+        </p>
+        <div class="download-buttons">
+            <a href="#" class="download-btn">Download on App Store</a>
+            <a href="#" class="download-btn">Get it on Google Play</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <section class="section">
+            <h2>About the App</h2>
+            <div class="section-intro">
+                <p>
+                    Manage everything in one place: meal plans, weight, InBody data, water intake, fasting timer, progress photos, and personal notes.
+                    Reduce the hassle of searching for information and practice Switch On Diet more efficiently by checking all necessary data at a glance.
+                </p>
+                <p style="margin-top: 16px;">
+                    Based on Dr. Park Yong-woo's 33 years of clinical experience, this app supports both the scientifically proven 4-week program and intermittent fasting.
+                    Track your progress effortlessly with daily journals, providing a systematic and rewarding diet experience.
+                </p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Key Features</h2>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Schedule Management</h3>
+                    <p>
+                        Automatically generate a 4-week program schedule and view it at a glance with the calendar view.
+                        Easily understand Phase-by-Phase meal changes and customize your own schedule.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Meal Management</h3>
+                    <p>
+                        Phase-specific meal plans are automatically provided, and you can easily track calories of foods you eat.
+                        Save frequently eaten foods and meal templates for quick entry, and register your own custom foods.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Intermittent Fasting Timer</h3>
+                    <p>
+                        Check fasting progress with real-time timer and receive notifications when you reach your target time.
+                        Fasting records are automatically saved and viewable in statistics.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Comprehensive Health Records</h3>
+                    <p>
+                        Record detailed InBody data including weight, body fat percentage, muscle mass, visceral fat, waist circumference.
+                        Manage all daily health data in one place: water intake, sleep hours, bowel movements, and personal notes.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Progress Photos</h3>
+                    <p>
+                        Take body photos and save them by date to visually track your body's changes over time.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Workout Records</h3>
+                    <p>
+                        Support 30+ workout types including walking, running, and strength training.
+                        Record running routes with GPS tracking, and automatically collect steps and stairs climbed data by integrating with HealthKit and Google Fit.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Statistics and Analysis</h3>
+                    <p>
+                        Visualize all data including weight, body fat, water intake, and workout records with graphs and charts to understand progress at a glance.
+                        Check statistics for desired periods with various filters: 7 days, 30 days, entire program, or custom date range.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Recommended For</h2>
+            <ul class="target-list">
+                <li>Those practicing Switch On Diet program</li>
+                <li>Those doing or planning to start intermittent fasting</li>
+                <li>Those wanting to systematically manage diet, exercise, and health data</li>
+                <li>Those wanting to conveniently manage diet records in one place</li>
+                <li>Those wanting motivation through change tracking and sense of achievement</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Highlights</h2>
+            <ul class="highlight-list">
+                <li>Scientific diet program based on Dr. Park Yong-woo's 33 years of clinical experience</li>
+                <li>Support both 4-week program and intermittent fasting (16:8, 5:2, 24-hour)</li>
+                <li>All-in-one management: meal, weight, InBody, water intake, fasting, workout, notes</li>
+                <li>Clear understanding of progress with detailed statistics and graphs</li>
+            </ul>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-links">
+            <a href="support_en.html">Support</a>
+            <a href="https://app.kaheej.com/apps/burning-on/privacy/privacy_policy_en.html">Privacy Policy</a>
+        </div>
+        <div class="footer-copyright">
+            &copy; 2025 BurningON Diet Challenge. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>
